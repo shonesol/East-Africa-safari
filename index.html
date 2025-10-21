@@ -1175,30 +1175,36 @@
         }
 
         // Form Submissions
-        document.getElementById('bookingForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Booking request submitted! We will contact you within 24 hours.');
-            bookings++;
-            localStorage.setItem('bookings', bookings);
-            closeBookingModal();
-        });
+        // Form Submissions with backend email integration
+document.getElementById('bookingForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const formData = new FormData(this);
+    fetch('mail_handler.php', { method: 'POST', body: formData })
+      .then(res => res.json())
+      .then(data => {
+          alert(data.message);
+          this.reset();
+          closeBookingModal();
+      });
+});
 
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Message sent! We will get back to you soon.');
-            this.reset();
-        });
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const formData = new FormData(this);
+    formData.append('form_type', 'contact');
+    fetch('mail_handler.php', { method: 'POST', body: formData })
+      .then(res => res.json())
+      .then(data => alert(data.message));
+});
 
-        // Close modals when clicking outside
-        window.onclick = function(event) {
-            const modals = ['bookingModal', 'imageModal', 'wildlifeModal', 'mountainModal', 'accommodationModal'];
-            modals.forEach(modalId => {
-                const modal = document.getElementById(modalId);
-                if (event.target === modal) {
-                    modal.style.display = 'none';
-                }
-            });
-        };
+document.querySelector('footer form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const formData = new FormData(this);
+    formData.append('form_type', 'newsletter');
+    fetch('mail_handler.php', { method: 'POST', body: formData })
+      .then(res => res.json())
+      .then(data => alert(data.message));
+});
 
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
