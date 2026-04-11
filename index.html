@@ -8,12 +8,17 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <br>
+    
+<!-- Fullscreen container -->
+<div id="fullscreen-view" onclick="closeFullscreen()">
+    <img id="fullscreen-img">
     <div class="gallery-item" onclick="openImageModal('https://www.passportandpixels.com/wp-content/uploads/2020/11/Laikipia-Day-3_R5-115_pp.jpg')">
                     <img src="IMG_4524.jpeg" alt="Wildlife Photography">
                     <div class="gallery-overlay">
                         <div class="gallery-text">Wildlife Photography</div>
                     </div>
                 </div>
+</div>
 
     <style>
         .hero-bg {
@@ -542,6 +547,10 @@
             <div class="text-center mb-16">
                 <h2 class="font-playfair text-4xl md:text-5xl font-bold text-gray-800 mb-6">Photo Gallery</h2>
                 <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    
+<!-- Fullscreen container -->
+<div id="fullscreen-view" onclick="closeFullscreen()">
+    <img id="fullscreen-img">
                     Explore our collection of stunning wildlife and landscape photography
                 </p>
             </div>
@@ -732,6 +741,7 @@
                 </div>
             </div>
         </div>
+    </div>
     </section>
 
     <!-- Contact Section -->
