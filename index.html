@@ -883,129 +883,28 @@
     <button class="floating-button bg-green-600 hover:bg-green-700 text-white p-4 rounded-full shadow-lg transition-colors duration-300" onclick="openBookingModal()">
         <i class="fas fa-calendar-plus text-2xl"></i>
     </button>
-                <!-------boooking----->                
-<form id="bookingForm" 
-      action="https://formsubmit.co/shonesol28@gmail.com" 
-      method="POST" 
-      class="space-y-6">
-
-    <!-- SETTINGS -->
-    <input type="hidden" name="_subject" value="New Safari Booking - Andy Tours">
-    <input type="hidden" name="_template" value="table">
-    <input type="hidden" name="_captcha" value="false">
-
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-
-        <div>
-            <label>Full Name</label>
-            <input type="text" name="Full Name" required class="w-full px-4 py-3 border rounded-lg">
-        </div>
-
-        <div>
-            <label>Email Address</label>
-            <input type="email" name="Email" required class="w-full px-4 py-3 border rounded-lg">
-        </div>
-
-        <div>
-            <label>Phone Number</label>
-            <input type="tel" name="Phone" required class="w-full px-4 py-3 border rounded-lg">
-        </div>
-
-        <div>
-            <label>Number of Travelers</label>
-            <select name="Travelers" required class="w-full px-4 py-3 border rounded-lg">
-                <option value="">Select number</option>
-                <option>1 Person</option>
-                <option>2 People</option>
-                <option>3 People</option>
-                <option>4 People</option>
-                <option>5+ People</option>
-            </select>
-        </div>
-
-        <div>
-            <label>Preferred Destination</label>
-            <select name="Destination" required class="w-full px-4 py-3 border rounded-lg">
-                <option value="">Select destination</option>
-                <option>Kenya</option>
-                <option>Tanzania</option>
-                <option>Uganda</option>
-                <option>Rwanda</option>
-                <option>Multi-Country</option>
-            </select>
-        </div>
-
-        <div>
-            <label>Experience Type</label>
-            <select name="Experience" required class="w-full px-4 py-3 border rounded-lg">
-                <option value="">Select experience</option>
-                <option>Wildlife Safari</option>
-                <option>Mountain Climbing</option>
-                <option>Cultural Tours</option>
-                <option>Luxury Safari</option>
-                <option>Adventure Package</option>
-            </select>
-        </div>
-
-        <div>
-            <label>Travel Date</label>
-            <input type="date" name="Travel Date" required class="w-full px-4 py-3 border rounded-lg">
-        </div>
-
-        <div>
-            <label>Duration</label>
-            <select name="Duration" required class="w-full px-4 py-3 border rounded-lg">
-                <option value="">Select duration</option>
-                <option>3 Days</option>
-                <option>5 Days</option>
-                <option>7 Days</option>
-                <option>10 Days</option>
-                <option>14 Days</option>
-                <option>Custom</option>
-            </select>
-        </div>
-
-    </div>
-
-    <div>
-        <label>Special Requests</label>
-        <textarea name="Requests" rows="4" 
-        placeholder="Any special requirements..." 
-        class="w-full px-4 py-3 border rounded-lg"></textarea>
-    </div>
-
-    <div class="flex justify-center">
-        <button type="submit" 
-        class="bg-green-600 text-white py-3 px-8 rounded-lg font-semibold hover:bg-green-700">
-            Submit Booking Request
-        </button>
-    </div>
-
+                <!-------boooking----->   
+                                <form onsubmit="sendEmail(event)">
+  <input type="text" id="name" placeholder="Your Name" required>
+  <input type="email" id="email" placeholder="Your Email" required>
+  <textarea id="details" placeholder="Booking details" required></textarea>
+  <button type="submit">Book Now</button>
 </form>
 
-    <!-- Image Modal -->
-    <div id="imageModal" class="modal">
-        <div class="modal-content" style="max-width: 90%; max-height: 90%; padding: 0;">
-            <span class="close" onclick="closeImageModal()" style="position: absolute; top: 10px; right: 20px; z-index: 10; color: white; font-size: 40px;">&times;</span>
-            <img id="modalImage" src="" alt="" style="width: 100%; height: auto; border-radius: 10px;">
-        </div>
-    </div>
+<script>
+function sendEmail(event) {
+    event.preventDefault();
 
-    <!-- Wildlife Modal -->
-    <div id="wildlifeModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeWildlifeModal()">&times;</span>
-            <div id="wildlifeContent"></div>
-        </div>
-    </div>
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let details = document.getElementById("details").value;
 
-    <!-- Mountain Modal -->
-    <div id="mountainModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeMountainModal()">&times;</span>
-            <div id="mountainContent"></div>
-        </div>
-    </div>
+    let subject = "Safari Booking Request";
+    let body = `Name: ${name}%0AEmail: ${email}%0ADetails: ${details}`;
+
+    window.location.href = `mailto:shonesol28@gmail.com?subject=${subject}&body=${body}`;
+}
+</script>
 
     <!-- Accommodation Modal -->
     <div id="accommodationModal" class="modal">
