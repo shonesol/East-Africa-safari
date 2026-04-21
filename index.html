@@ -883,28 +883,48 @@
     <button class="floating-button bg-green-600 hover:bg-green-700 text-white p-4 rounded-full shadow-lg transition-colors duration-300" onclick="openBookingModal()">
         <i class="fas fa-calendar-plus text-2xl"></i>
     </button>
-                <!-------boooking----->   
-                                <form onsubmit="sendEmail(event)">
-  <input type="text" id="name" placeholder="Your Name" required>
-  <input type="email" id="email" placeholder="Your Email" required>
-  <textarea id="details" placeholder="Booking details" required></textarea>
-  <button type="submit">Book Now</button>
+                <!-------boooking----->
+                                <!DOCTYPE html>
+<html>
+<head>
+    <title>Safari Booking</title>
+
+    <!-- EmailJS -->
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+    <script>
+        (function(){
+            emailjs.init("YOUR_PUBLIC_KEY"); // <-- put your EmailJS public key
+        })();
+    </script>
+</head>
+
+<body>
+
+<h2>Book Your Safari</h2>
+
+<form id="bookingForm">
+    <input type="text" name="name" placeholder="Your Name" required><br><br>
+    <input type="email" name="email" placeholder="Your Email" required><br><br>
+    <textarea name="message" placeholder="Booking details" required></textarea><br><br>
+    <button type="submit">Book Now</button>
 </form>
 
 <script>
-function sendEmail(event) {
-    event.preventDefault();
+document.getElementById("bookingForm").addEventListener("submit", function(e) {
+    e.preventDefault();
 
-    let name = document.getElementById("name").value;
-    let email = document.getElementById("email").value;
-    let details = document.getElementById("details").value;
-
-    let subject = "Safari Booking Request";
-    let body = `Name: ${name}%0AEmail: ${email}%0ADetails: ${details}`;
-
-    window.location.href = `mailto:shonesol28@gmail.com?subject=${subject}&body=${body}`;
-}
+    emailjs.sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", this)
+    .then(function() {
+        alert("Booking sent to shonesol28@gmail.com successfully!");
+    }, function(error) {
+        alert("Error: " + JSON.stringify(error));
+    });
+});
 </script>
+
+</body>
+</html>
 
     <!-- Accommodation Modal -->
     <div id="accommodationModal" class="modal">
