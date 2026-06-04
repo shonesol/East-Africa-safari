@@ -243,7 +243,163 @@ window.open(
 
 });
 });
+  <!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Pearl Dreams Safaris</title>
+
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+<script>
+
+(function(){
+
+    emailjs.init("YOUR_PUBLIC_KEY"); 
+
+})();
+
 </script>
+
+<style>
+
+body { font-family: Arial; }
+
+.hero {
+
+    background: url('https://images.unsplash.com/photo-1547970810-dc1eac37d174') center/cover;
+
+    height: 90vh;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    color:white;
+
+    text-align:center;
+
+}
+
+.overlay { background: rgba(0,0,0,0.5); padding:40px; }
+
+.btn {
+
+    padding:12px 20px;
+
+    margin:5px;
+
+    border-radius:8px;
+
+    display:inline-block;
+
+}
+
+.green { background:green; color:white; }
+
+.whatsapp { background:#25D366; color:white; }
+
+</style>
+
+</head>
+
+<body>
+
+<!-- HERO -->
+
+<div class="hero">
+
+<div class="overlay">
+
+<h1 style="font-size:40px;">Pearl Dreams Safaris</h1>
+
+<p>Discover East Africa with unforgettable safari experiences</p>
+
+<a class="btn green" href="#booking">Book Safari</a>
+
+<!-- WhatsApp direct button -->
+
+<a class="btn whatsapp"
+
+href="https://wa.me/256759413273?text=Hello%20Pearl%20Dreams%20Safaris%2C%20I%20want%20to%20book%20a%20safari"
+
+target="_blank">
+
+Chat on WhatsApp
+
+</a>
+
+</div>
+
+</div>
+
+<!-- BOOKING FORM -->
+
+<section id="booking" style="padding:40px;">
+
+<h2>Safari Booking</h2>
+
+<form id="bookingForm">
+
+<input type="text" name="name" placeholder="Full Name" required><br><br>
+
+<input type="email" name="email" placeholder="Email" required><br><br>
+
+<input type="tel" name="phone" placeholder="Phone Number" required><br><br>
+
+<textarea name="message" placeholder="Travel details (dates, destination)" required></textarea><br><br>
+
+<button type="submit" class="green btn">Send Booking</button>
+
+</form>
+
+<p id="status"></p>
+
+</section>
+
+<script>
+
+document.getElementById("bookingForm").addEventListener("submit", function(e){
+
+e.preventDefault();
+
+emailjs.sendForm(
+
+    "YOUR_SERVICE_ID",
+
+    "YOUR_TEMPLATE_ID",
+
+    this
+
+).then(() => {
+
+    document.getElementById("status").innerText =
+
+    "Booking sent successfully to email + WhatsApp team will respond soon.";
+
+    this.reset();
+
+}, (error) => {
+
+    document.getElementById("status").innerText =
+
+    "Error sending booking.";
+
+});
+
+});
+ </script>
+  </script>
 
 </body>
 </html>
