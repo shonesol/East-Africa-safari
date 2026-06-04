@@ -148,6 +148,13 @@ color:white;
 padding:20px;
 margin-top:40px;
 }
+    .review-card{
+    background:#fff;
+    padding:15px;
+    margin:10px 0;
+    border-radius:10px;
+    box-shadow:0 2px 5px rgba(0,0,0,.1);
+}
 </style>
 </head>
 
@@ -190,6 +197,109 @@ margin-top:40px;
 <img src="IMG_1006.jpeg">
 <img src="IMG_1083.jpeg">
 </div>
+    
+<!-- reviews -->
+    
+<section id="reviews-section">
+    <h2>Customer Reviews</h2>
+
+    <input type="text" id="reviewName" placeholder="Your Name">
+
+    <select id="reviewRating">
+        <option value="5">⭐⭐⭐⭐⭐ (5)</option>
+        <option value="4">⭐⭐⭐⭐ (4)</option>
+        <option value="3">⭐⭐⭐ (3)</option>
+        <option value="2">⭐⭐ (2)</option>
+        <option value="1">⭐ (1)</option>
+    </select>
+
+    <textarea id="reviewComment" placeholder="Write your review"></textarea>
+
+    <button onclick="submitReview()">Submit Review</button>
+
+    <div id="reviewsContainer"></div>
+</section>
+    <script type="module">
+
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+
+import {
+  getFirestore,
+  collection,
+  addDoc,
+  getDocs,
+  query,
+  orderBy
+} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyBTFFagAmDZg7ZCyBeI7RGK3sJdjHSXT4c",
+  authDomain: "pearl-dreams-safaris.firebaseapp.com",
+  projectId: "pearl-dreams-safaris",
+  storageBucket: "pearl-dreams-safaris.firebasestorage.app",
+  messagingSenderId: "856441091870",
+  appId: "1:856441091870:web:100e4a11e6abb36e88fb0f",
+  measurementId: "G-NHC5NRZX90"
+};
+
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+
+window.submitReview = async function () {
+
+    const name = document.getElementById("reviewName").value;
+    const rating = document.getElementById("reviewRating").value;
+    const comment = document.getElementById("reviewComment").value;
+
+    if (!name || !comment) {
+        alert("Please fill all fields");
+        return;
+    }
+
+    await addDoc(collection(db, "reviews"), {
+        name,
+        rating,
+        comment,
+        createdAt: Date.now()
+    });
+
+    document.getElementById("reviewName").value = "";
+    document.getElementById("reviewComment").value = "";
+
+    loadReviews();
+};
+
+async function loadReviews() {
+
+    const reviewsContainer =
+        document.getElementById("reviewsContainer");
+
+    reviewsContainer.innerHTML = "";
+
+    const q = query(
+        collection(db, "reviews"),
+        orderBy("createdAt", "desc")
+    );
+
+    const snapshot = await getDocs(q);
+
+    snapshot.forEach((doc) => {
+
+        const review = doc.data();
+
+        reviewsContainer.innerHTML += `
+            <div class="review-card">
+                <h4>${review.name}</h4>
+                <p>${"⭐".repeat(review.rating)}</p>
+                <p>${review.comment}</p>
+            </div>
+        `;
+    });
+}
+
+loadReviews();
+
+</script>
 <!-- EMAILJS -->
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
