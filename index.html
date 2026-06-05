@@ -324,10 +324,7 @@ align-items:center;
   font-size:14px;
 }
 
-.lodge-card a:hover{
-  color:#0f766e;
-}
-  .dropdown{
+.dropdown{
   position:relative;
   display:inline-block;
 }
@@ -335,7 +332,7 @@ align-items:center;
 .dropdown-content{
   display:none;
   position:absolute;
-  background:white;
+  background:#fff;
   width:420px;
   max-height:80vh;
   overflow-y:auto;
@@ -348,6 +345,30 @@ align-items:center;
 .dropdown:hover .dropdown-content{
   display:block;
 }
+
+.sub{
+  background:#f8fafc;
+  margin:10px 0;
+  padding:10px;
+  border-radius:10px;
+}
+
+.sub strong{
+  display:block;
+  margin-bottom:6px;
+  color:#0f766e;
+}
+
+.sub a{
+  display:block;
+  text-decoration:none;
+  color:#111827;
+  padding:3px 0;
+}
+
+.sub a:hover{
+  color:#0f766e;
+}
 </style>
 </head>
 
@@ -355,101 +376,164 @@ align-items:center;
 
 <!-- NAV -->
 <nav>
-
   <h1>🌍 PEARL DREAMS SAFARIS</h1>
 
   <div class="menu">
 
     <a href="#booking" class="btn">Book Now</a>
 
-    <!-- Dropdown wrapper (FIXED) -->
     <div class="dropdown">
-
       <button class="btn">Lodges & Parks ▾</button>
 
       <div class="dropdown-content">
 
-        <h3>🇺🇬 Uganda</h3>
+        <!-- 🇺🇬 UGANDA -->
+        <h3>Uganda</h3>
 
-        <div class="park-card">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Bwindi_Impenetrable_Forest.jpg">
-          <h4>Bwindi Impenetrable NP</h4>
-
-          <div class="lodge-card">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Mountain_gorilla_Bwindi.jpg">
-            <a href="#booking" onclick="selectLodge('Buhoma Lodge')">Buhoma Lodge</a>
-          </div>
-
-          <div class="lodge-card">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/8/8e/Gorilla_forest_camp.jpg">
-            <a href="#booking" onclick="selectLodge('Mahogany Springs Lodge')">Mahogany Springs</a>
-          </div>
+        <div class="sub">
+          <strong>Bwindi Impenetrable NP</strong>
+          <a href="#">Buhoma Lodge — $600 - $900</a>
+          <a href="#">Mahogany Springs Lodge — $450 - $750</a>
+          <a href="#">Bweza Gorilla Lodge — $350 - $600</a>
+          <a href="#">Gorilla Forest Camp — $900 - $1500</a>
+          <a href="#booking">Book Now</a>
         </div>
 
-        <div class="park-card">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/6/6d/Queen_Elizabeth_National_Park_Uganda.jpg">
-          <h4>Queen Elizabeth NP</h4>
-
-          <div class="lodge-card">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/2/21/Lion_Queen_Elizabeth_NP.jpg">
-            <a href="#booking" onclick="selectLodge('Mweya Safari Lodge')">Mweya Safari Lodge</a>
-          </div>
-
-          <div class="lodge-card">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/7/7b/Elephants_Uganda.jpg">
-            <a href="#booking" onclick="selectLodge('Buffalo Safari Lodge')">Buffalo Safari Lodge</a>
-          </div>
+        <div class="sub">
+          <strong>Queen Elizabeth NP</strong>
+          <a href="#">Mweya Safari Lodge — $450 - $800</a>
+          <a href="#">Buffalo Safari Lodge — $250 - $500</a>
+          <a href="#">Elephant Plains Lodge — $300 - $550</a>
+          <a href="#">Enganzi Game Lodge — $200 - $400</a>
+          <a href="#booking">Book Now</a>
         </div>
 
-        <h3>🇰🇪 Kenya</h3>
-
-        <div class="park-card">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Masai_Mara_Sunset.jpg">
-          <h4>Maasai Mara</h4>
-
-          <div class="lodge-card">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/0/0c/Lion_Masai_Mara.jpg">
-            <a href="#booking" onclick="selectLodge('Mara Serena Lodge')">Mara Serena Lodge</a>
-          </div>
-
-          <div class="lodge-card">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/2/2e/Wildebeest_Migration.jpg">
-            <a href="#booking" onclick="selectLodge('Keekorok Lodge')">Keekorok Lodge</a>
-          </div>
+        <div class="sub">
+          <strong>Murchison Falls NP</strong>
+          <a href="#">Paraa Safari Lodge — $350 - $700</a>
+          <a href="#">Pakuba Safari Lodge — $200 - $450</a>
+          <a href="#">Chobe Safari Lodge — $300 - $600</a>
+          <a href="#booking">Book Now</a>
         </div>
 
-        <h3>🇹🇿 Tanzania</h3>
-
-        <div class="park-card">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/9/9e/Serengeti_Landscape.jpg">
-          <h4>Serengeti NP</h4>
-
-          <div class="lodge-card">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/5/5a/Serengeti_Lion.jpg">
-            <a href="#booking" onclick="selectLodge('Serengeti Serena Lodge')">Serengeti Serena</a>
-          </div>
-
-          <div class="lodge-card">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/1/1d/Four_Seasons_Safari_Lodge_Serengeti.jpg">
-            <a href="#booking" onclick="selectLodge('Four Seasons Safari Lodge')">Four Seasons Lodge</a>
-          </div>
+        <div class="sub">
+          <strong>Kidepo Valley NP</strong>
+          <a href="#">Apoka Safari Lodge — $800 - $1200</a>
+          <a href="#">Kidepo Savannah Lodge — $250 - $500</a>
+          <a href="#booking">Book Now</a>
         </div>
 
-        <h3>🇷🇼 Rwanda</h3>
+        <div class="sub">
+          <strong>Lake Mburo NP</strong>
+          <a href="#">Mihingo Lodge — $350 - $700</a>
+          <a href="#">Rwakobo Rock Lodge — $200 - $400</a>
+          <a href="#booking">Book Now</a>
+        </div>
 
-        <div class="park-card">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/4/4d/Volcanoes_National_Park_Rwanda.jpg">
-          <h4>Volcanoes NP</h4>
+        <!-- 🇰🇪 KENYA -->
+        <h3>Kenya</h3>
 
-          <div class="lodge-card">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/1/1a/Mountain_Gorilla_Rwanda.jpg">
-            <a href="#booking" onclick="selectLodge('Bisate Lodge')">Bisate Lodge</a>
-          </div>
+        <div class="sub">
+          <strong>Maasai Mara</strong>
+          <a href="#">Mara Serena Lodge — $250 - $500</a>
+          <a href="#">Keekorok Lodge — $200 - $400</a>
+          <a href="#">Sarova Mara Camp — $300 - $600</a>
+          <a href="#booking">Book Now</a>
+        </div>
 
-          <div class="lodge-card">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/9/9c/Gorilla_trekking_Rwanda.jpg">
-            <a href="#booking" onclick="selectLodge('Sabyinyo Lodge')">Sabyinyo Lodge</a>
-          </div>
+        <div class="sub">
+          <strong>Amboseli NP</strong>
+          <a href="#">Ol Tukai Lodge — $250 - $500</a>
+          <a href="#">Kibo Safari Camp — $180 - $350</a>
+          <a href="#">Amboseli Serena Lodge — $300 - $650</a>
+          <a href="#booking">Book Now</a>
+        </div>
+
+        <div class="sub">
+          <strong>Tsavo East NP</strong>
+          <a href="#">Voi Safari Lodge — $200 - $400</a>
+          <a href="#">Satao Camp — $250 - $500</a>
+          <a href="#booking">Book Now</a>
+        </div>
+
+        <div class="sub">
+          <strong>Lake Nakuru NP</strong>
+          <a href="#">Sarova Lion Hill Lodge — $250 - $500</a>
+          <a href="#">Lake Nakuru Lodge — $200 - $450</a>
+          <a href="#booking">Book Now</a>
+        </div>
+
+        <!-- 🇹🇿 TANZANIA -->
+        <h3>Tanzania</h3>
+
+        <div class="sub">
+          <strong>Serengeti NP</strong>
+          <a href="#">Four Seasons Safari Lodge — $800 - $2000</a>
+          <a href="#">Serengeti Serena Lodge — $350 - $600</a>
+          <a href="#">Kubu Kubu Tented Lodge — $400 - $800</a>
+          <a href="#booking">Book Now</a>
+        </div>
+
+        <div class="sub">
+          <strong>Ngorongoro Crater</strong>
+          <a href="#">Ngorongoro Serena Lodge — $400 - $800</a>
+          <a href="#">Lemala Camp — $500 - $1200</a>
+          <a href="#booking">Book Now</a>
+        </div>
+
+        <div class="sub">
+          <strong>Tarangire NP</strong>
+          <a href="#">Tarangire Safari Lodge — $250 - $500</a>
+          <a href="#">Maramboi Tented Camp — $300 - $650</a>
+          <a href="#booking">Book Now</a>
+        </div>
+
+        <!-- 🇷🇼 RWANDA -->
+        <h3>Rwanda</h3>
+
+        <div class="sub">
+          <strong>Volcanoes NP</strong>
+          <a href="#">Bisate Lodge — $1200 - $2000</a>
+          <a href="#">Sabyinyo Lodge — $800 - $1500</a>
+          <a href="#">Virunga Lodge — $900 - $1800</a>
+          <a href="#booking">Book Now</a>
+        </div>
+
+        <div class="sub">
+          <strong>Akagera NP</strong>
+          <a href="#">Ruzizi Tented Lodge — $300 - $600</a>
+          <a href="#">Magashi Camp — $700 - $1500</a>
+          <a href="#booking">Book Now</a>
+        </div>
+
+        <!-- 🇧🇮 BURUNDI -->
+        <h3>Burundi</h3>
+
+        <div class="sub">
+          <strong>Kibira NP</strong>
+          <a href="#">Kibira Eco Lodge — $120 - $250</a>
+          <a href="#booking">Book Now</a>
+        </div>
+
+        <div class="sub">
+          <strong>Rusizi NP</strong>
+          <a href="#">Rusizi Safari Camp — $150 - $300</a>
+          <a href="#booking">Book Now</a>
+        </div>
+
+        <!-- 🇸🇸 SOUTH SUDAN -->
+        <h3>South Sudan</h3>
+
+        <div class="sub">
+          <strong>Boma NP</strong>
+          <a href="#">Boma Safari Camp — $150 - $300</a>
+          <a href="#booking">Book Now</a>
+        </div>
+
+        <div class="sub">
+          <strong>Bandingilo NP</strong>
+          <a href="#">Bandingilo Wildlife Camp — $180 - $350</a>
+          <a href="#booking">Book Now</a>
         </div>
 
       </div>
