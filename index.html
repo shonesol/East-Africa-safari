@@ -252,29 +252,13 @@ gap:10px;
 align-items:center;
 }
 
-.dropdown-content{
-  display:none;
-  position:absolute;
-  background:#ffffff;
-  width:420px;
-  max-height:80vh;
-  overflow-y:auto;
-  box-shadow:0 20px 50px rgba(0,0,0,0.25);
-  border-radius:16px;
-  padding:15px;
-  z-index:9999;
-  animation:fadeIn 0.2s ease-in-out;
-}
-
+.
 @keyframes fadeIn{
   from{opacity:0; transform:translateY(-10px);}
   to{opacity:1; transform:translateY(0);}
 }
 
-.dropdown:hover .dropdown-content{
-  display:block;
-}
-
+.
 .dropdown-content h3{
   margin:18px 0 10px;
   color:#0f766e;
@@ -343,6 +327,27 @@ align-items:center;
 .lodge-card a:hover{
   color:#0f766e;
 }
+  .dropdown{
+  position:relative;
+  display:inline-block;
+}
+
+.dropdown-content{
+  display:none;
+  position:absolute;
+  background:white;
+  width:420px;
+  max-height:80vh;
+  overflow-y:auto;
+  box-shadow:0 20px 50px rgba(0,0,0,0.25);
+  border-radius:16px;
+  padding:15px;
+  z-index:9999;
+}
+
+.dropdown:hover .dropdown-content{
+  display:block;
+}
 </style>
 </head>
 
@@ -356,92 +361,100 @@ align-items:center;
   <div class="menu">
 
     <a href="#booking" class="btn">Book Now</a>
-    <div class="dropdown-content">
 
-  <h3>🇺🇬 Uganda</h3>
+    <!-- Dropdown wrapper (FIXED) -->
+    <div class="dropdown">
 
-  <div class="park-card">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Bwindi_Impenetrable_Forest.jpg">
-    <h4>Bwindi Impenetrable NP</h4>
+      <button class="btn">Lodges & Parks ▾</button>
 
-    <div class="lodge-card">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Mountain_gorilla_Bwindi.jpg">
-      <a href="#booking" onclick="selectLodge('Buhoma Lodge')">Buhoma Lodge</a>
+      <div class="dropdown-content">
+
+        <h3>🇺🇬 Uganda</h3>
+
+        <div class="park-card">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Bwindi_Impenetrable_Forest.jpg">
+          <h4>Bwindi Impenetrable NP</h4>
+
+          <div class="lodge-card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Mountain_gorilla_Bwindi.jpg">
+            <a href="#booking" onclick="selectLodge('Buhoma Lodge')">Buhoma Lodge</a>
+          </div>
+
+          <div class="lodge-card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/8/8e/Gorilla_forest_camp.jpg">
+            <a href="#booking" onclick="selectLodge('Mahogany Springs Lodge')">Mahogany Springs</a>
+          </div>
+        </div>
+
+        <div class="park-card">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/6/6d/Queen_Elizabeth_National_Park_Uganda.jpg">
+          <h4>Queen Elizabeth NP</h4>
+
+          <div class="lodge-card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/2/21/Lion_Queen_Elizabeth_NP.jpg">
+            <a href="#booking" onclick="selectLodge('Mweya Safari Lodge')">Mweya Safari Lodge</a>
+          </div>
+
+          <div class="lodge-card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/7b/Elephants_Uganda.jpg">
+            <a href="#booking" onclick="selectLodge('Buffalo Safari Lodge')">Buffalo Safari Lodge</a>
+          </div>
+        </div>
+
+        <h3>🇰🇪 Kenya</h3>
+
+        <div class="park-card">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Masai_Mara_Sunset.jpg">
+          <h4>Maasai Mara</h4>
+
+          <div class="lodge-card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/0c/Lion_Masai_Mara.jpg">
+            <a href="#booking" onclick="selectLodge('Mara Serena Lodge')">Mara Serena Lodge</a>
+          </div>
+
+          <div class="lodge-card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/2/2e/Wildebeest_Migration.jpg">
+            <a href="#booking" onclick="selectLodge('Keekorok Lodge')">Keekorok Lodge</a>
+          </div>
+        </div>
+
+        <h3>🇹🇿 Tanzania</h3>
+
+        <div class="park-card">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/9/9e/Serengeti_Landscape.jpg">
+          <h4>Serengeti NP</h4>
+
+          <div class="lodge-card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/5a/Serengeti_Lion.jpg">
+            <a href="#booking" onclick="selectLodge('Serengeti Serena Lodge')">Serengeti Serena</a>
+          </div>
+
+          <div class="lodge-card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/1/1d/Four_Seasons_Safari_Lodge_Serengeti.jpg">
+            <a href="#booking" onclick="selectLodge('Four Seasons Safari Lodge')">Four Seasons Lodge</a>
+          </div>
+        </div>
+
+        <h3>🇷🇼 Rwanda</h3>
+
+        <div class="park-card">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/4/4d/Volcanoes_National_Park_Rwanda.jpg">
+          <h4>Volcanoes NP</h4>
+
+          <div class="lodge-card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/1/1a/Mountain_Gorilla_Rwanda.jpg">
+            <a href="#booking" onclick="selectLodge('Bisate Lodge')">Bisate Lodge</a>
+          </div>
+
+          <div class="lodge-card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/9c/Gorilla_trekking_Rwanda.jpg">
+            <a href="#booking" onclick="selectLodge('Sabyinyo Lodge')">Sabyinyo Lodge</a>
+          </div>
+        </div>
+
+      </div>
     </div>
 
-    <div class="lodge-card">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/8/8e/Gorilla_forest_camp.jpg">
-      <a href="#booking" onclick="selectLodge('Mahogany Springs Lodge')">Mahogany Springs</a>
-    </div>
-  </div>
-
-  <div class="park-card">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6d/Queen_Elizabeth_National_Park_Uganda.jpg">
-    <h4>Queen Elizabeth NP</h4>
-
-    <div class="lodge-card">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/2/21/Lion_Queen_Elizabeth_NP.jpg">
-      <a href="#booking" onclick="selectLodge('Mweya Safari Lodge')">Mweya Safari Lodge</a>
-    </div>
-
-    <div class="lodge-card">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/7/7b/Elephants_Uganda.jpg">
-      <a href="#booking" onclick="selectLodge('Buffalo Safari Lodge')">Buffalo Safari Lodge</a>
-    </div>
-  </div>
-
-  <h3>🇰🇪 Kenya</h3>
-
-  <div class="park-card">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Masai_Mara_Sunset.jpg">
-    <h4>Maasai Mara</h4>
-
-    <div class="lodge-card">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/0/0c/Lion_Masai_Mara.jpg">
-      <a href="#booking" onclick="selectLodge('Mara Serena Lodge')">Mara Serena Lodge</a>
-    </div>
-
-    <div class="lodge-card">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/2/2e/Wildebeest_Migration.jpg">
-      <a href="#booking" onclick="selectLodge('Keekorok Lodge')">Keekorok Lodge</a>
-    </div>
-  </div>
-
-  <h3>🇹🇿 Tanzania</h3>
-
-  <div class="park-card">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/9/9e/Serengeti_Landscape.jpg">
-    <h4>Serengeti NP</h4>
-
-    <div class="lodge-card">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/5/5a/Serengeti_Lion.jpg">
-      <a href="#booking" onclick="selectLodge('Serengeti Serena Lodge')">Serengeti Serena</a>
-    </div>
-
-    <div class="lodge-card">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/1/1d/Four_Seasons_Safari_Lodge_Serengeti.jpg">
-      <a href="#booking" onclick="selectLodge('Four Seasons Safari Lodge')">Four Seasons Lodge</a>
-    </div>
-  </div>
-
-  <h3>🇷🇼 Rwanda</h3>
-
-  <div class="park-card">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/4/4d/Volcanoes_National_Park_Rwanda.jpg">
-    <h4>Volcanoes NP</h4>
-
-    <div class="lodge-card">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/1/1a/Mountain_Gorilla_Rwanda.jpg">
-      <a href="#booking" onclick="selectLodge('Bisate Lodge')">Bisate Lodge</a>
-    </div>
-
-    <div class="lodge-card">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/9/9c/Gorilla_trekking_Rwanda.jpg">
-      <a href="#booking" onclick="selectLodge('Sabyinyo Lodge')">Sabyinyo Lodge</a>
-    </div>
-  </div>
-
-</div>
   </div>
 </nav>
   <script>
