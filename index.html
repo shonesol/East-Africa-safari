@@ -3,12 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PEARL DREAMS SAFARIS </title>
+<title>PEARL DREAMS SAFARIS</title>
 
-<!-- FONT -->
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-<!-- ICONS -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
@@ -35,7 +32,6 @@ color:#0f766e;
 font-size:20px;
 }
 
-/* HERO */
 .hero{
 height:90vh;
 background:url('IMG_0957.jpeg') center/cover no-repeat;
@@ -60,12 +56,8 @@ position:relative;
 z-index:2;
 }
 
-.hero h1{
-font-size:45px;
-margin:0;
-}
+.hero h1{font-size:45px;margin:0;}
 
-/* BUTTON */
 .btn{
 background:#0f766e;
 color:white;
@@ -75,15 +67,14 @@ border-radius:8px;
 text-decoration:none;
 display:inline-block;
 margin-top:10px;
+cursor:pointer;
 }
 
-/* SECTIONS */
 section{
 padding:60px 20px;
 text-align:center;
 }
 
-/* CARDS */
 .card{
 background:white;
 padding:20px;
@@ -94,12 +85,15 @@ display:inline-block;
 width:250px;
 }
 
-/* GALLERY */
 .gallery{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:10px;
 padding:20px;
+}
+
+.gallery-item{
+position:relative;
 }
 
 .gallery img{
@@ -110,11 +104,19 @@ border-radius:10px;
 transition:0.3s;
 }
 
-.gallery img:hover{
-transform:scale(1.05);
+.gallery img:hover{transform:scale(1.05);}
+
+.caption{
+position:absolute;
+bottom:10px;
+left:10px;
+background:rgba(0,0,0,0.6);
+color:white;
+padding:5px 10px;
+font-size:12px;
+border-radius:6px;
 }
 
-/* FORM */
 form{
 max-width:500px;
 margin:auto;
@@ -124,22 +126,12 @@ border-radius:10px;
 box-shadow:0 3px 10px rgba(0,0,0,0.1);
 }
 
-input,textarea{
+input,textarea,select{
 width:100%;
 padding:10px;
 margin:8px 0;
 border:1px solid #ddd;
 border-radius:6px;
-}
-
-button{
-background:#0f766e;
-color:white;
-padding:10px;
-border:none;
-width:100%;
-border-radius:6px;
-cursor:pointer;
 }
 
 footer{
@@ -148,12 +140,13 @@ color:white;
 padding:20px;
 margin-top:40px;
 }
-    .review-card{
-    background:#fff;
-    padding:15px;
-    margin:10px 0;
-    border-radius:10px;
-    box-shadow:0 2px 5px rgba(0,0,0,.1);
+
+.review-card{
+background:#fff;
+padding:15px;
+margin:10px 0;
+border-radius:10px;
+box-shadow:0 2px 5px rgba(0,0,0,.1);
 }
 </style>
 </head>
@@ -162,8 +155,8 @@ margin-top:40px;
 
 <!-- NAV -->
 <nav>
-<h1>🌍 PEARL DREAMS SAFARIS </h1>
-<a class="btn" href="#book">Book Now</a>
+<h1>🌍 PEARL DREAMS SAFARIS</h1>
+<a class="btn" href="#booking">Book Now</a>
 </nav>
 
 <!-- HERO -->
@@ -171,78 +164,96 @@ margin-top:40px;
 <div>
 <h1>Discover East Africa</h1>
 <p>Uganda • Kenya • Tanzania • Rwanda</p>
-<a href="#book" class="btn">Plan Your Safari</a>
+<a href="#booking" class="btn">Plan Your Safari</a>
 </div>
 </div>
 
 <!-- DESTINATIONS -->
 <section>
 <h2>Top Destinations</h2>
-
-<div class="card">Uganda</div>
-<div class="card">Kenya</div>
-<div class="card">Tanzania</div>
-<div class="card">Rwanda</div>
+<div class="card">Uganda 🦍 Gorilla Trekking Paradise</div>
+<div class="card">Kenya 🦁 Big Five Safari Plains</div>
+<div class="card">Tanzania 🌋 Serengeti Migration</div>
+<div class="card">Rwanda 🌿 Misty Mountain Experience</div>
 </section>
 
-<!-- GALLERY -->
+<!-- GALLERY WITH CAPTIONS -->
 <section>
-<h2>gallery</h2>
+<h2>Safari Gallery</h2>
 
 <div class="gallery">
-<img src="3b9198fe-0483-40fa-8c7d-fb7706cdde46.jpeg" >
-<img src="36f95f26-015b-4c1b-8a22-cfe14fe0bd13.jpeg" >
-<img src="7320a1c5-07e1-46a4-9658-1c8a209a1e8e.jpeg" >
-<img src="fbf12100-ebae-4f9d-b73c-0baef9944789.jpeg" >
-<img src="e8395a5f-fd72-4199-b374-4e2eeb7b5a2a.jpeg" >
-<img src="IMG_1081.jpeg" >
-</h2> 
+
+<div class="gallery-item">
+<img src="3b9198fe-0483-40fa-8c7d-fb7706cdde46.jpeg">
+<div class="caption">Golden savannah sunrise safari</div>
+</div>
+
+<div class="gallery-item">
+<img src="36f95f26-015b-4c1b-8a22-cfe14fe0bd13.jpeg">
+<div class="caption">Wildlife roaming freely in the plains</div>
+</div>
+
+<div class="gallery-item">
+<img src="7320a1c5-07e1-46a4-9658-1c8a209a1e8e.jpeg">
+<div class="caption">Adventure jeep safari experience</div>
+</div>
+
+<div class="gallery-item">
+<img src="fbf12100-ebae-4f9d-b73c-0baef9944789.jpeg">
+<div class="caption">Luxury safari lodge stay</div>
+</div>
+
+<div class="gallery-item">
+<img src="e8395a5f-fd72-4199-b374-4e2eeb7b5a2a.jpeg">
+<div class="caption">Elephants crossing the wild river</div>
+</div>
+
+<div class="gallery-item">
+<img src="IMG_1081.jpeg">
+<div class="caption">African sunset over the savannah</div>
+</div>
 
 </div>
-    </section>
-    
-<!-- reviews -->
-    
-<section id="reviews-section">
-    <h2>Customer Reviews</h2>
-
-    <input type="text" id="reviewName" placeholder="Your Name">
-
-    <select id="reviewRating">
-        <option value="5">⭐⭐⭐⭐⭐ (5)</option>
-        <option value="4">⭐⭐⭐⭐ (4)</option>
-        <option value="3">⭐⭐⭐ (3)</option>
-        <option value="2">⭐⭐ (2)</option>
-        <option value="1">⭐ (1)</option>
-    </select>
-
-    <textarea id="reviewComment" placeholder="Write your review"></textarea>
-
-    <button onclick="submitReview()">Submit Review</button>
-
-    <div id="reviewsContainer"></div>
 </section>
-    <script type="module">
 
+<!-- REVIEWS (FIREBASE - UNCHANGED) -->
+<section id="reviews-section">
+<h2>Customer Reviews</h2>
+
+<input type="text" id="reviewName" placeholder="Your Name">
+<select id="reviewRating">
+<option value="5">⭐⭐⭐⭐⭐</option>
+<option value="4">⭐⭐⭐⭐</option>
+<option value="3">⭐⭐⭐</option>
+<option value="2">⭐⭐</option>
+<option value="1">⭐</option>
+</select>
+
+<textarea id="reviewComment" placeholder="Write your review"></textarea>
+<button onclick="submitReview()">Submit Review</button>
+
+<div id="reviewsContainer"></div>
+</section>
+
+<script type="module">
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
-
 import {
-  getFirestore,
-  collection,
-  addDoc,
-  getDocs,
-  query,
-  orderBy
+getFirestore,
+collection,
+addDoc,
+getDocs,
+query,
+orderBy
 } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
 const firebaseConfig = {
-  apiKey: "",
-  authDomain: "pearl-dreams-safaris.firebaseapp.com",
-  projectId: "pearl-dreams-safaris",
-  storageBucket: "pearl-dreams-safaris.firebasestorage.app",
-  messagingSenderId: "856441091870",
-  appId: "1:856441091870:web:100e4a11e6abb36e88fb0f",
-  measurementId: "G-NHC5NRZX90"
+apiKey: "",
+authDomain: "pearl-dreams-safaris.firebaseapp.com",
+projectId: "pearl-dreams-safaris",
+storageBucket: "pearl-dreams-safaris.firebasestorage.app",
+messagingSenderId: "856441091870",
+appId: "1:856441091870:web:100e4a11e6abb36e88fb0f",
+measurementId: "G-NHC5NRZX90"
 };
 
 const app = initializeApp(firebaseConfig);
@@ -250,72 +261,69 @@ const db = getFirestore(app);
 
 window.submitReview = async function () {
 
-    const name = document.getElementById("reviewName").value;
-    const rating = document.getElementById("reviewRating").value;
-    const comment = document.getElementById("reviewComment").value;
+const name = document.getElementById("reviewName").value;
+const rating = document.getElementById("reviewRating").value;
+const comment = document.getElementById("reviewComment").value;
 
-    if (!name || !comment) {
-        alert("Please fill all fields");
-        return;
-    }
+if (!name || !comment) {
+alert("Please fill all fields");
+return;
+}
 
-    await addDoc(collection(db, "reviews"), {
-        name,
-        rating,
-        comment,
-        createdAt: Date.now()
-    });
+await addDoc(collection(db, "reviews"), {
+name,
+rating,
+comment,
+createdAt: Date.now()
+});
 
-    document.getElementById("reviewName").value = "";
-    document.getElementById("reviewComment").value = "";
+document.getElementById("reviewName").value = "";
+document.getElementById("reviewComment").value = "";
 
-    loadReviews();
+loadReviews();
 };
 
 async function loadReviews() {
 
-    const reviewsContainer =
-        document.getElementById("reviewsContainer");
+const reviewsContainer = document.getElementById("reviewsContainer");
+reviewsContainer.innerHTML = "";
 
-    reviewsContainer.innerHTML = "";
+const q = query(collection(db, "reviews"), orderBy("createdAt", "desc"));
+const snapshot = await getDocs(q);
 
-    const q = query(
-        collection(db, "reviews"),
-        orderBy("createdAt", "desc")
-    );
+snapshot.forEach((doc) => {
+const review = doc.data();
 
-    const snapshot = await getDocs(q);
-
-    snapshot.forEach((doc) => {
-
-        const review = doc.data();
-
-        reviewsContainer.innerHTML += `
-            <div class="review-card">
-                <h4>${review.name}</h4>
-                <p>${"⭐".repeat(review.rating)}</p>
-                <p>${review.comment}</p>
-            </div>
-        `;
-    });
+reviewsContainer.innerHTML += `
+<div class="review-card">
+<h4>${review.name}</h4>
+<p>${"⭐".repeat(review.rating)}</p>
+<p>${review.comment}</p>
+</div>
+`;
+});
 }
 
 loadReviews();
-
 </script>
-<!-- EMAILJS -->
+
+<!-- EMAILJS (UNCHANGED LOGIC) -->
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
 <script>
 emailjs.init("sfXnGzmLhepzCRFWS");
 
-document.getElementById("bookingForm").addEventListener("submit", function(e){
+document.addEventListener("DOMContentLoaded", function () {
+
+const form = document.getElementById("bookingForm");
+
+if (form) {
+form.addEventListener("submit", function(e){
 e.preventDefault();
 
 emailjs.sendForm(
-    "service_7zd9d3k",
-
-    "template_ujlcl24",
+"service_7zd9d3k",
+"template_ujlcl24",
 this
 ).then(function(){
 
@@ -328,166 +336,33 @@ window.open(
 
 });
 });
+}
 
-<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-
-<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-
-<script>
-
-(function(){
-
-    emailjs.init("sfXnGzmLhepzCRFWS"); 
-
-})();
-
+});
 </script>
 
-<style>
-
-body { font-family: Arial; }
-
-.hero {
-
-    background: url('https://images.unsplash.com/photo-1547970810-dc1eac37d174') center/cover;
-
-    height: 90vh;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    color:white;
-
-    text-align:center;
-
-}
-
-.overlay { background: rgba(0,0,0,0.5); padding:40px; }
-
-.btn {
-
-    padding:12px 20px;
-
-    margin:5px;
-
-    border-radius:8px;
-
-    display:inline-block;
-
-}
-
-.green { background:green; color:white; }
-
-.whatsapp { background:#25D366; color:white; }
-
-</style>
-
-</head>
-
-<body>
-
-<!-- HERO -->
-
-<div class="hero">
-
-<div class="overlay">
-
-<h1 style="font-size:40px;">Pearl Dreams Safaris</h1>
-
-<p>Discover East Africa with unforgettable safari experiences</p>
-
-<a class="btn green" href="#booking">Book Safari</a>
-
-<!-- WhatsApp direct button -->
-
-<a class="btn whatsapp"
-
-href="https://wa.me/256770462422?text=Hello%20Pearl%20Dreams%20Safaris%2C%20I%20want%20to%20book%20a%20safari"
-
-target="_blank">
-
-Chat on WhatsApp
-
-</a>
-
-</div>
-
-</div>
-
 <!-- BOOKING FORM -->
-
-<section id="booking" style="padding:40px;">
-
+<section id="booking">
 <h2>Safari Booking</h2>
 
 <form id="bookingForm">
-
-<input type="text" name="name" placeholder="Full Name" required><br><br>
-
-<input type="email" name="email" placeholder="Email" required><br><br>
-
-<input type="tel" name="phone" placeholder="Phone Number" required><br><br>
-
-<textarea name="message" placeholder="Travel details (dates, destination)" required></textarea><br><br>
-
-<button type="submit" class="green btn">Send Booking</button>
-
+<input type="text" name="name" placeholder="Full Name" required>
+<input type="email" name="email" placeholder="Email" required>
+<input type="tel" name="phone" placeholder="Phone Number" required>
+<textarea name="message" placeholder="Travel details (dates, destination)" required></textarea>
+<button type="submit" class="btn">Send Booking</button>
 </form>
-
-<p id="status"></p>
-
 </section>
 
-<script>
-
-document.getElementById("bookingForm").addEventListener("submit", function(e){
-
-e.preventDefault();
-
-emailjs.sendForm(
-
-    "service_7zd9d3k",
-
-    "template_ujlcl24",
-
-    this
-
-).then(() => {
-
-    document.getElementById("status").innerText =
-
-    "Booking sent successfully to email + WhatsApp team will respond soon.";
-
-    this.reset();
-
-}, (error) => {
-
-    document.getElementById("status").innerText =
-
-    "Error sending booking.";
-
-});
-
-});
- </script>
-  </script>
-    </section>
-    <!-- FOOTER -->
+<!-- FOOTER -->
 <footer>
-<section>
-<!-- CONTACT -->
-<section>
 <h2>Contact</h2>
 <p>📞 +256 759 413 273</p>
-    <p>📞 256770462422</p>
+<p>📞 +256 770 462 422</p>
 <p>📧 shonesol28@gmail.com</p>
 <p>📍 Kampala, Uganda</p>
-</section>
-    <p>© 2026 Pearl Dreams Safaris</p>
-    </footer>
+<p>© 2026 Pearl Dreams Safaris</p>
+</footer>
 
 </body>
 </html>
