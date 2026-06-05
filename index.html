@@ -101,7 +101,18 @@ width:100%;
 height:220px;
 object-fit:cover;
 border-radius:10px;
-transition:0.3s;
+transition:.whatsapp{
+background:#25D366;
+color:white;
+padding:12px 20px;
+border-radius:8px;
+text-decoration:none;
+display:inline-block;
+margin-top:10px;
+}
+
+.whatsapp:hover{
+opacity:0.9;
 }
 
 .gallery img:hover{transform:scale(1.05);}
@@ -167,6 +178,27 @@ box-shadow:0 2px 5px rgba(0,0,0,.1);
 <a href="#booking" class="btn">Plan Your Safari</a>
 </div>
 </div>
+  <a class="btn whatsapp"
+href="https://wa.me/256770462422?text=Hello%20Pearl%20Dreams%20Safaris%2C%20I%20want%20to%20book%20a%20safari"
+target="_blank">
+<i class="fab fa-whatsapp"></i> Chat on WhatsApp
+  </a>
+<script>
+  </emailjs.sendForm(
+    "service_7zd9d3k",
+    "template_ujlcl24",
+    this
+).then(function(){
+
+    alert("Booking sent successfully!");
+
+    window.open(
+        "https://wa.me/256770462422?text=Hello%20Pearl%20Dreams%20Safaris%2C%20I%20have%20just%20submitted%20a%20booking%20from%20the%20website.",
+        "_blank"
+    );
+
+});
+</script>
 
 <!-- DESTINATIONS -->
 <section>
