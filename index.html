@@ -199,6 +199,27 @@ target="_blank">
 
 });
 </script>
+  <a class="btn whatsapp"
+href="https://wa.me/256762584996?text=Hello%20Pearl%20Dreams%20Safaris%2C%20I%20want%20to%20book%20a%20safari"
+target="_blank">
+<i class="fab fa-whatsapp"></i> Chat on WhatsApp
+  </a>
+<script>
+  </emailjs.sendForm(
+    "service_7zd9d3k",
+    "template_ujlcl24",
+    this
+).then(function(){
+
+    alert("Booking sent successfully!");
+
+    window.open(
+        "https://wa.me/256762584996?text=Hello%20Pearl%20Dreams%20Safaris%2C%20I%20have%20just%20submitted%20a%20booking%20from%20the%20website.",
+        "_blank"
+    );
+
+});
+</script>
 
 <!-- DESTINATIONS -->
 <section>
