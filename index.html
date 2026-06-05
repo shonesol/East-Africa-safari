@@ -246,17 +246,156 @@ width:90%;
 }
 
 }
+  .menu{
+display:flex;
+gap:10px;
+align-items:center;
+}
+
+.dropdown{
+position:relative;
+display:inline-block;
+}
+
+.dropdown-content{
+display:none;
+position:absolute;
+background:white;
+min-width:320px;
+max-height:70vh;
+overflow:auto;
+box-shadow:0 10px 30px rgba(0,0,0,.2);
+border-radius:10px;
+padding:15px;
+z-index:9999;
+}
+
+.dropdown:hover .dropdown-content{
+display:block;
+}
+
+.dropdown-content h3{
+margin:10px 0;
+color:#0f766e;
+border-bottom:1px solid #eee;
+padding-bottom:5px;
+}
+
+.sub{
+margin-bottom:10px;
+padding:10px;
+background:#f8fafc;
+border-radius:8px;
+}
+
+.sub strong{
+display:block;
+margin-bottom:5px;
+}
+
+.sub a{
+display:block;
+text-decoration:none;
+color:#333;
+padding:4px 0;
+}
+
+.sub a:hover{
+color:#0f766e;
+}
 </style>
 </head>
 
 <body>
 
 <!-- NAV -->
+
 <nav>
 <h1>🌍 PEARL DREAMS SAFARIS</h1>
 <a class="btn" href="#booking">Book Now</a>
-</nav>
+  <div class="menu">
+    <a href="#booking" class="btn">Book Now</a>
 
+    <div class="dropdown">
+      <button class="btn">Lodges & Parks ▾</button>
+
+      <div class="dropdown-content">
+
+        <!-- UGANDA -->
+        <h3>Uganda</h3>
+
+        <div class="sub">
+          <strong>Bwindi Impenetrable NP</strong>
+          <a href="#">Buhoma Lodge</a>
+          <a href="#">Mahogany Springs Lodge</a>
+          <a href="#">Gorilla Forest Camp</a>
+          <a href="#booking">Book Now</a>
+        </div>
+
+        <div class="sub">
+          <strong>Queen Elizabeth NP</strong>
+          <a href="#">Mweya Safari Lodge</a>
+          <a href="#">Buffalo Safari Lodge</a>
+          <a href="#">Elephant Plains Lodge</a>
+          <a href="#booking">Book Now</a>
+        </div>
+
+        <div class="sub">
+          <strong>Murchison Falls NP</strong>
+          <a href="#">Paraa Safari Lodge</a>
+          <a href="#">Pakuba Safari Lodge</a>
+          <a href="#booking">Book Now</a>
+        </div>
+
+        <!-- KENYA -->
+        <h3>Kenya</h3>
+
+        <div class="sub">
+          <strong>Maasai Mara</strong>
+          <a href="#">Mara Serena Lodge</a>
+          <a href="#">Keekorok Lodge</a>
+          <a href="#booking">Book Now</a>
+        </div>
+
+        <div class="sub">
+          <strong>Amboseli NP</strong>
+          <a href="#">Ol Tukai Lodge</a>
+          <a href="#">Kibo Safari Camp</a>
+          <a href="#booking">Book Now</a>
+        </div>
+
+        <!-- TANZANIA -->
+        <h3>Tanzania</h3>
+
+        <div class="sub">
+          <strong>Serengeti NP</strong>
+          <a href="#">Serengeti Serena Lodge</a>
+          <a href="#">Four Seasons Safari Lodge</a>
+          <a href="#booking">Book Now</a>
+        </div>
+
+        <div class="sub">
+          <strong>Ngorongoro</strong>
+          <a href="#">Ngorongoro Serena Lodge</a>
+          <a href="#booking">Book Now</a>
+        </div>
+
+        <!-- RWANDA -->
+        <h3>Rwanda</h3>
+
+        <div class="sub">
+          <strong>Volcanoes NP</strong>
+          <a href="#">Bisate Lodge</a>
+          <a href="#">Sabyinyo Lodge</a>
+          <a href="#booking">Book Now</a>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+</nav>
 <!-- HERO -->
 <div class="hero">
 <div>
