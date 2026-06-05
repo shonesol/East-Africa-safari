@@ -313,87 +313,110 @@ color:#0f766e;
 <nav>
 <h1>🌍 PEARL DREAMS SAFARIS</h1>
 <a class="btn" href="#booking">Book Now</a>
+</nav>
+  <nav>
   <div class="menu">
-    <div class="dropdown">
-      <button class="btn">Lodges & Parks ▾</button>
+    <a href="#booking" class="btn">Book Now</a>
+  <input type="text" id="selectedLodge" name="lodge" placeholder="Selected Lodge" readonly>
+  <div class="menu">
+<div class="dropdown-content">
 
-      <div class="dropdown-content">
+  <h3>🇺🇬 Uganda</h3>
 
-        <!-- UGANDA -->
-        <h3>Uganda</h3>
+  <div class="park-card">
+    <img src="https://images.unsplash.com/photo-1589656966895-2f33e7653819?auto=format&fit=crop&w=1000&q=80">
+    <h4>Bwindi Impenetrable NP</h4>
 
-        <div class="sub">
-          <strong>Bwindi Impenetrable NP</strong>
-          <a href="#">Buhoma Lodge</a>
-          <a href="#">Mahogany Springs Lodge</a>
-          <a href="#">Gorilla Forest Camp</a>
-          <a href="#booking">Book Now</a>
-        </div>
-
-        <div class="sub">
-          <strong>Queen Elizabeth NP</strong>
-          <a href="#">Mweya Safari Lodge</a>
-          <a href="#">Buffalo Safari Lodge</a>
-          <a href="#">Elephant Plains Lodge</a>
-          <a href="#booking">Book Now</a>
-        </div>
-
-        <div class="sub">
-          <strong>Murchison Falls NP</strong>
-          <a href="#">Paraa Safari Lodge</a>
-          <a href="#">Pakuba Safari Lodge</a>
-          <a href="#booking">Book Now</a>
-        </div>
-
-        <!-- KENYA -->
-        <h3>Kenya</h3>
-
-        <div class="sub">
-          <strong>Maasai Mara</strong>
-          <a href="#">Mara Serena Lodge</a>
-          <a href="#">Keekorok Lodge</a>
-          <a href="#booking">Book Now</a>
-        </div>
-
-        <div class="sub">
-          <strong>Amboseli NP</strong>
-          <a href="#">Ol Tukai Lodge</a>
-          <a href="#">Kibo Safari Camp</a>
-          <a href="#booking">Book Now</a>
-        </div>
-
-        <!-- TANZANIA -->
-        <h3>Tanzania</h3>
-
-        <div class="sub">
-          <strong>Serengeti NP</strong>
-          <a href="#">Serengeti Serena Lodge</a>
-          <a href="#">Four Seasons Safari Lodge</a>
-          <a href="#booking">Book Now</a>
-        </div>
-
-        <div class="sub">
-          <strong>Ngorongoro</strong>
-          <a href="#">Ngorongoro Serena Lodge</a>
-          <a href="#booking">Book Now</a>
-        </div>
-
-        <!-- RWANDA -->
-        <h3>Rwanda</h3>
-
-        <div class="sub">
-          <strong>Volcanoes NP</strong>
-          <a href="#">Bisate Lodge</a>
-          <a href="#">Sabyinyo Lodge</a>
-          <a href="#booking">Book Now</a>
-        </div>
-
-      </div>
+    <div class="lodge-card">
+      <img src="https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=300&q=80">
+      <a href="#booking" onclick="selectLodge('Buhoma Lodge')">Buhoma Lodge</a>
     </div>
 
+    <div class="lodge-card">
+      <img src="https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=300&q=80">
+      <a href="#booking" onclick="selectLodge('Mahogany Springs Lodge')">Mahogany Springs</a>
+    </div>
+
+    <div class="lodge-card">
+      <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=300&q=80">
+      <a href="#booking" onclick="selectLodge('Gorilla Forest Camp')">Gorilla Forest Camp</a>
+    </div>
   </div>
 
-</nav>
+  <div class="park-card">
+    <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1000&q=80">
+    <h4>Queen Elizabeth NP</h4>
+
+    <div class="lodge-card">
+      <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=300&q=80">
+      <a href="#booking" onclick="selectLodge('Mweya Safari Lodge')">Mweya Safari Lodge</a>
+    </div>
+
+    <div class="lodge-card">
+      <img src="https://images.unsplash.com/photo-1500530857211-6f7f4c6b8f19?auto=format&fit=crop&w=300&q=80">
+      <a href="#booking" onclick="selectLodge('Buffalo Safari Lodge')">Buffalo Safari Lodge</a>
+    </div>
+  </div>
+
+  <h3>🇰🇪 Kenya</h3>
+
+  <div class="park-card">
+    <img src="https://images.unsplash.com/photo-1547970810-dc1eac37d174?auto=format&fit=crop&w=1000&q=80">
+    <h4>Maasai Mara</h4>
+
+    <div class="lodge-card">
+      <img src="https://images.unsplash.com/photo-1523413651479-597eb2da0ad6?auto=format&fit=crop&w=300&q=80">
+      <a href="#booking" onclick="selectLodge('Mara Serena Lodge')">Mara Serena Lodge</a>
+    </div>
+
+    <div class="lodge-card">
+      <img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=300&q=80">
+      <a href="#booking" onclick="selectLodge('Keekorok Lodge')">Keekorok Lodge</a>
+    </div>
+  </div>
+
+  <h3>🇹🇿 Tanzania</h3>
+
+  <div class="park-card">
+    <img src="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?auto=format&fit=crop&w=1000&q=80">
+    <h4>Serengeti NP</h4>
+
+    <div class="lodge-card">
+      <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=300&q=80">
+      <a href="#booking" onclick="selectLodge('Serengeti Serena Lodge')">Serengeti Serena</a>
+    </div>
+
+    <div class="lodge-card">
+      <img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=300&q=80">
+      <a href="#booking" onclick="selectLodge('Four Seasons Safari Lodge')">Four Seasons Lodge</a>
+    </div>
+  </div>
+
+  <h3>🇷🇼 Rwanda</h3>
+
+  <div class="park-card">
+    <img src="https://images.unsplash.com/photo-1601758125946-6ec2ef64daf8?auto=format&fit=crop&w=1000&q=80">
+    <h4>Volcanoes NP</h4>
+
+    <div class="lodge-card">
+      <img src="https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=300&q=80">
+      <a href="#booking" onclick="selectLodge('Bisate Lodge')">Bisate Lodge</a>
+    </div>
+
+    <div class="lodge-card">
+      <img src="https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=300&q=80">
+      <a href="#booking" onclick="selectLodge('Sabyinyo Lodge')">Sabyinyo Lodge</a>
+    </div>
+  </div>
+
+</div>
+  </nav>
+  <script>
+function selectLodge(lodgeName){
+  document.getElementById("selectedLodge").value = lodgeName;
+  document.getElementById("booking").scrollIntoView({behavior:"smooth"});
+}
+</script>
 <!-- HERO -->
 <div class="hero">
 <div>
