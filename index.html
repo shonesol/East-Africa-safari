@@ -93,6 +93,26 @@ box-shadow:0 3px 10px rgba(0,0,0,0.1);
 display:inline-block;
 width:250px;
 }
+    
+#lightbox {
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.9);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+#lightbox img {
+  max-width: 95%;
+  max-height: 95%;
+  object-fit: contain;
+}
+
 
 /* GALLERY */
 .gallery{
@@ -187,16 +207,26 @@ margin-top:40px;
 
 <!-- GALLERY -->
 <section>
-<h2>Gallery</h2>
+<h2>lightbox-img</h2>
 
-<div class="gallery">
-<img src="3b9198fe-0483-40fa-8c7d-fb7706cdde46.jpeg">
-<img src="36f95f26-015b-4c1b-8a22-cfe14fe0bd13.jpeg">
-<img src="7320a1c5-07e1-46a4-9658-1c8a209a1e8e.jpeg">
-<img src="fbf12100-ebae-4f9d-b73c-0baef9944789.jpeg">
-<img src="e8395a5f-fd72-4199-b374-4e2eeb7b5a2a.jpeg">
-<img src="IMG_1081.jpeg">
+<div class="lightbox">
+<img src="3b9198fe-0483-40fa-8c7d-fb7706cdde46.jpeg" onclick="openImage(this)">
+<img src="36f95f26-015b-4c1b-8a22-cfe14fe0bd13.jpeg" onclick="openImage(this)">
+<img src="7320a1c5-07e1-46a4-9658-1c8a209a1e8e.jpeg" onclick="openImage(this)">
+<img src="fbf12100-ebae-4f9d-b73c-0baef9944789.jpeg" onclick="openImage(this)">
+<img src="e8395a5f-fd72-4199-b374-4e2eeb7b5a2a.jpeg" onclick="openImage(this)">
+<img src="IMG_1081.jpeg" onclick="openImage(this)">
 </div>
+    <script>
+function openImage(img) {
+  document.getElementById("lightbox").style.display = "flex";
+  document.getElementById("lightbox-img").src = img.src;
+}
+
+function closeImage() {
+  document.getElementById("lightbox").style.display = "none";
+}
+</script>
     
 <!-- reviews -->
     
