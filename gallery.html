@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pearl Dreams Safaris Gallery</title>
+
+<style>
+body{
+  font-family:Arial,sans-serif;
+  margin:0;
+  background:#f5f7fa;
+}
+
+header{
+  background:#0f766e;
+  color:white;
+  text-align:center;
+  padding:20px;
+}
+
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+  gap:20px;
+  padding:20px;
+}
+
+.gallery video{
+  width:100%;
+  border-radius:15px;
+}
+
+.back-btn{
+  display:inline-block;
+  margin:20px;
+  padding:12px 20px;
+  background:#0f766e;
+  color:white;
+  text-decoration:none;
+  border-radius:8px;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>🎥 Pearl Dreams Safaris Video Gallery</h1>
+</header>
+
+<a href="index.html" class="back-btn">← Back Home</a>
+
+<div class="gallery">
+
+  <video controls>
+    <source src="gorilla.mp4" type="video/mp4">
+  </video>
+
+  <video controls>
+    <source src="lions.mp4" type="video/mp4">
+  </video>
+
+  <video controls>
+    <source src="elephants.mp4" type="video/mp4">
+  </video>
+
+  <video controls>
+    <source src="murchison.mp4" type="video/mp4">
+  </video>
+
+</div>
+
+</body>
+</html>
