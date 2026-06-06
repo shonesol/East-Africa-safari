@@ -382,40 +382,32 @@ align-items:center;
   object-fit:cover;
   border-radius:15px;
 }
-.logo-header{
-    display:flex;
-    align-items:center;
-    gap:8px;
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* keeps logo on left */
+    padding: 10px 20px;
 }
 
-.header-logo{
-    width:45px;
-    height:45px;
-    object-fit:contain;
-    border-radius:50%;
-}
-
-.logo-header h1{
-    margin:0;
-    color:#0f766e;
-    font-size:18px;
-    font-weight:700;
+.logo{
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    width: 30px;
+    height: auto;
+    z-index: 1000;
 }
 </style>
 </head>
+    
 
 <body>
+    <header class="navbar">
+    <img src="images/logo.png" alt="Pearl Dreams Safaris" class="logo">
+</header>
 
 <!-- NAV -->
 <nav>
-
-  <div class="logo-header">
-      <img src="5E584E79-5323-46B6-9C18-D14A4217BAE3.png"
-           alt="Pearl Dreams Safaris Logo"
-           class="header-logo">
-
-      <h1>PEARL DREAMS SAFARIS</h1>
-  </div>
 
   <a href="gallery.html" class="btn">Gallery</a>
 
